@@ -63,7 +63,7 @@ const Register = () => {
                 <span className="logo">Connectify</span>
                 <span className="title">Register</span>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" placeholder="diplay name" />
+                    <input type="text" placeholder="user name" />
                     <input type="email" placeholder="email" />
                     <input type="password" placeholder="password" autoComplete="on" />
                     <input style={{ display: "none" }} type="file" id="file" />
