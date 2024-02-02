@@ -101,7 +101,7 @@
         width: 65%;
         height: 80%;
         display: flex;
-        overflow: hidden;
+        overflow: hidden;  
 
         @include tablet {
             width: 90%;
@@ -214,6 +214,13 @@
             }
         }
 
+        .chats{
+            overflow-y: auto;
+            max-height: 445px;
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+        }
+
         .chat {
             flex: 2;
 
@@ -244,7 +251,7 @@
                 padding: 10px;
                 height: calc(100% - 160px);
                 overflow: scroll;
-                overflow-x: hidden;
+                scrollbar-color: transparent transparent;
 
                 .message {
                     display: flex;

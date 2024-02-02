@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef } from 'react'
 import { AuthContext } from '../context/AuthContext';
 import { ChatContext } from '../context/ChatContext';
+import Smiley from "../images/smiley.png"
 
 const Message = (message) => {
 
@@ -14,13 +15,10 @@ const Message = (message) => {
     }, [message])
 
     
-    console.log(message.message.senderID);
-    console.log(message.message);
-    
     return (
         <div ref={ref} className={`message ${message.message.senderID === currentUser.uid && "owner"}`}>
             <div className="messageInfo">
-                <img src={message.message.senderID === currentUser.uid ? currentUser.photoURL : data.user.photoURL} alt="" />
+                <img src={message.message.senderID === currentUser.uid ? currentUser.photoURL ? currentUser.photoURL : Smiley : data.user.photoURL ? data.user.photoURL : Smiley} alt="" />
                 <span>Just Now</span>
             </div>
             <div className="messageContent">
